@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpg" href="Images/Motion.jpeg">
+  <title>MotionCut Company Pricing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <img src="Images/logo.webp" alt="" class="logo">
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1 style="color: black; font-size: 45px; font-family: 'Verdana', sans-serif;"><u>MotionCut Company Pricing</u></h1>
+
+  <section>
+    <div class="pricing-card">
+<img src="Images/basic.jpg" alt="Basic Plan Image" width="160" height="150">
+      <h2>Basic Plan</h2>
+      <h3>For Freelancers</h3>
+      <h2>$5/month</h2>
+      <p>one member</p>
+      <ul class="u">
+        <li>work schedule</li>
+        <li>time tracking</li>
+        <li>reports</li>
+      </ul>
+      <button onclick="purchasePlan('Basic')">Get Started</button>
+    </div>
+
+    <div class="pricing-card">
+      <img src="Images/sta.jpg" alt="Pro Plan Image"  width="160" height="150">
+      <h2>Standart Plan</h2>
+      <h3>For regular teams</h3>
+      <h2>$10/month</h2>
+      <p>teammate/month</p>
+      <ul class="u">
+        <li>everything in Basic</li>
+        <li>request(eg.PTO,WFH)</li>
+        <li>teamates &messaging</li>
+      </ul>
+      <button onclick="purchasePlan('Standart')">Get Started</button>
+    </div>
+
+    <div class="pricing-card">
+      <img src="Images/pr.jpg" alt="Premium Plan Image"  width="160" height="150">
+      <h2>Premium Plan</h2>
+      <h3>$15/month</h2>
+      <h2>For tailor-made solution</h2>
+      <p>teammate/month</p>
+      <ul class="u">
+        <li>everything in Team</li>
+        <li>white-label platform</li>
+        <li>24/7 VIP Support</li>
+      </ul>
+      <button onclick="purchasePlan('Premium')">Get Started</button>
+    </div>
+  </section>
+
+  <script>
+    function purchasePlan(plan) {
+      alert(`You have chosen the ${plan} plan. Redirecting to payment...`);
+      // Add logic for redirection or further processing
+    }
+    
+  </script>
+  <section id="user-settings">
+    <h2>User Settings</h2>
+    <label for="currency-select">Currency:</label>
+    <select id="currency-select" onchange="updateSettings()">
+      <option value="USD">US Dollar ($)</option>
+      <option value="EUR">Euro (€)</option>
+      <option value="GBP">British Pound (£)</option>
+      <!-- Add more currency options as needed -->
+    </select>
+
+    <label for="unit-select">Measurement Unit:</label>
+    <select id="unit-select" onchange="updateSettings()">
+      <option value="metric">Metric (cm, kg)</option>
+      <option value="imperial">Imperial (in, lbs)</option>
+      <!-- Add more unit options as needed -->
+    </select>
+  </section>
+
+  <script>
+    // Your existing JavaScript code here
+
+    // Function to update user settings
+    function updateSettings() {
+      var selectedCurrency = document.getElementById("currency-select").value;
+      var selectedUnit = document.getElementById("unit-select").value;
+
+      saveUserPreferences(selectedCurrency, selectedUnit);
+    }
+
+    function saveUserPreferences(currency, unit) {
+      console.log(`User preferences updated: Currency - ${currency}, Unit - ${unit}`);
+    }
+  </script>
+
+
+<footer>
+  <a>Copyright &copy; and &reg; Since
+    <script>
+      document.write(new Date().getFullYear())
+    </script> Under MotionCut : (Project Is Done By pritesh kumar ray)
+  </a>
+  <a href="#">Privacy Policy</a>
+  <a href="#">Terms of Service</a>
+  <!--  social icons or links here -->
+  
+</footer>
+
+</body>
+</html>
